@@ -1,0 +1,1 @@
+System.register(["./p-09b56430.system.js"],(function(){"use strict";var r,t;return{setters:[function(e){r=e.p;t=e.b}],execute:function(){r().then((function(r){return t([["p-zoacrdyk.system",[[1,"lazy-image",{alt:[1],src:[1],rootMargin:[1,"root-margin"],loadSrc:[32],loadError:[32]}]]]],r)}))}}}));
