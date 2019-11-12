@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Lazy Image Web Component</title>
 
+  <script src="https://unpkg.com/@beck24/example-code-component/dist/example-code.js"></script>
+
   <script type="module" src="./build/lazy-image.esm.js"></script>
   <script nomodule src="./build/lazy-image.js"></script>
 
@@ -18,21 +20,9 @@
       max-width: 1200px;
     }
 
-    .example-wrapper {
-      display: flex;
-    }
-
-    .show-code {
-      width: 100%;
-    }
-
-    .card {
+    example-code {
+      display: block;
       margin-bottom: 3rem;
-    }
-
-    li.L0, li.L1, li.L2, li.L3,
-    li.L5, li.L6, li.L7, li.L8 {
-      list-style-type: decimal !important;
     }
   </style>
 
@@ -47,51 +37,22 @@
 
         <main>
           <section class="layout-width">
-              <div class="card">
-                  <div class="card-header">
-                    <h5>Basic Example</h5>
-                    <p>Takes the size of the src image</p>
-                  </div>
-                  <div class="card-body example-wrapper">
-                    <div class="example">
-                        <lazy-image src="https://picsum.photos/400/300" />
-                    </div>
-                    <div class="show-code">
-                        <div class="accordion" id="basicExample">
-                            <div class="card">
-                              <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    HTML
-                                  </button>
-                                </h2>
-                              </div>
+            <example-code>
+              <div slot="example">
+                <h5>Basic Example</h5>
 
-                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#basicExample">
-                                <div class="card-body">
-                                  <pre class="prettyprint lang-html linenums">&lt;lazy-image src="https://picsum.photos/400/300" /></pre>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    CSS
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#basicExample">
-                                <div class="card-body">
-                                  <pre class="prettyprint lang-css">/** no css for this example */</pre>
-                                  See availabe css vars on the <a href="https://github.com/beck24/lazy-load-image-web-component/blob/master/src/components/lazy-image/readme.md#css-custom-properties">component documentation</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </div>
-                </div>
+                <lazy-image src="https://picsum.photos/400/300" />
+              </div>
+
+<pretty-code slot="html" language="html">
+&lt;lazy-image src="https://picsum.photos/400/300" />
+</pretty-code>
+
+              <div slot="css">
+                No css for this example.<br>
+                See availabe css vars on the <a href="https://github.com/beck24/lazy-load-image-web-component/blob/master/src/components/lazy-image/readme.md#css-custom-properties">component documentation</a>
+              </div>
+            </example-code>
           </section>
         </main>
 
